@@ -1,14 +1,36 @@
 import {findZodiac} from "./lib.js";
 
-alert("Какой Ваш знак зодиака?");
+const buttonEl = document.getElementById('button');
+const dayEl = document.getElementById('day');
+const monthEl = document.getElementById('month');
 
- const day = Number(prompt("Введите число рождения. Число от 1 до 31",''));
- const month = Number(prompt("месяц рождения. Число от 1 до 12",''));
 
-const zodiac = findZodiac(new Date(0, month-1,day));
 
-const elements = document.getElementById('body');
-const element = document.createElement("div",);
-element.textContent = zodiac;
-element.className = 'class';
-elements.appendChild(element);
+
+
+buttonEl.addEventListener("click",() => {
+    const day = Number(dayEl.value);
+    const month = Number(monthEl.value);
+
+
+
+    console.log(day);
+    console.log(month);
+    const zodiac = findZodiac(new Date(0, month-1,day));
+    console.log(zodiac);
+
+    const elements = document.getElementById('body');
+    const element = document.createElement("div",);
+
+    element.textContent = 'Вы '+ zodiac;
+    element.className = 'class';
+    elements.appendChild(element);
+
+} );
+
+
+
+
+
+//const zodiac = findZodiac(new Date(0, month-1,day));
+
