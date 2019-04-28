@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/azatmagdeev/zodiac.svg?branch=master)](https://travis-ci.org/azatmagdeev/zodiac) [![codecov](https://codecov.io/gh/azatmagdeev/zodiac/branch/master/graph/badge.svg)](https://codecov.io/gh/azatmagdeev/zodiac)
 
 // Овен 21 марта — 20 апреля
 
