@@ -25,7 +25,6 @@ export function findZodiac(birthday) {
         return "Водолей (20 января — 18 февраля)";
     if (birthday >= new Date(0,1,19) && birthday <= new Date(0,2,20))
         return "Рыбы (19 февраля — 20 марта)";
-    return 'неверно ввели дату';
 }
 
 
