@@ -1,36 +1,20 @@
 import {findZodiac} from "./lib.js";
 
 const buttonEl = document.getElementById('button');
-const dayEl = document.getElementById('day');
-const monthEl = document.getElementById('month');
+const dateEl = document.getElementById('date');
+const elements = document.getElementById('body');
+const element = document.createElement("div",);
 
+buttonEl.addEventListener("click", () => {
+    element.textContent = '';
 
+    const birthday = new Date(dateEl.value);
+    const birthZodiac = new Date(0, birthday.getMonth(), birthday.getDate());
 
-
-
-buttonEl.addEventListener("click",() => {
-    const day = Number(dayEl.value);
-    const month = Number(monthEl.value);
-
-
-
-    console.log(day);
-    console.log(month);
-    const zodiac = findZodiac(new Date(0, month-1,day));
-    console.log(zodiac);
-
-    const elements = document.getElementById('body');
-    const element = document.createElement("div",);
-
-    element.textContent = 'Вы '+ zodiac;
+    element.textContent = 'Вы ' + findZodiac(birthZodiac);
     element.className = 'class';
     elements.appendChild(element);
 
-} );
+    dateEl.value = '';
 
-
-
-
-
-//const zodiac = findZodiac(new Date(0, month-1,day));
-
+});
