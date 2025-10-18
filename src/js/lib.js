@@ -48,7 +48,19 @@ const Pisces = new Zodiac(
 
 
 const zodiacs = [
-    Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Capricorn2, Aquarius, Pisces
+    Aries,
+    Taurus,
+    Gemini,
+    Cancer,
+    Leo,
+    Virgo,
+    Libra,
+    Scorpio,
+    Sagittarius,
+    Capricorn,
+    Capricorn2,
+    Aquarius,
+    Pisces
 ];
 
 export function findZodiac(birthday) {

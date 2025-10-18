@@ -6,8 +6,8 @@ const elements = document.getElementById('body');
 
 buttonEl.addEventListener("click", () => {
     elements.textContent = '';
+    if (!dateEl.value) return;
     const birthday = new Date(dateEl.value);
     const birthZodiac = new Date(0, birthday.getMonth(), birthday.getDate());
     elements.textContent = `Вы ${findZodiac(birthZodiac)}`;
-    dateEl.value = '';
 });
